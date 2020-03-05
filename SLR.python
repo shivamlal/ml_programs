@@ -11,7 +11,17 @@ from sklearn.linear_model import LinearRegression
 lin = LinearRegression()
 lin.fit(training_x,training_y)
 pred_y = lin.predict(testing_x)
-old = testing_y[3]
-new = pred_y[3]
-print(old)
-print(new)
+testing_y[3]
+pred_y[3]
+plt.scatter(training_x,training_y, color = 'red')
+plt.plot(training_x ,lin.predict(training_x), color = 'blue')
+plt.title('salary&exp training plot')
+plt.xlabel("Exp")
+plt.ylabel("salary")
+plt.show()
+plt.scatter(testing_x,testing_y, color = 'red')
+plt.plot(training_x ,lin.predict(training_x), color = 'blue')
+plt.title('salary&exp testing plot')
+plt.xlabel("Exp")
+plt.ylabel("salary")
+plt.show()
